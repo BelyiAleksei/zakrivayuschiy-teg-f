@@ -115,8 +115,8 @@
 
 /*  card 7 */
 .multiple-img {
-  filter: sepia(0.6);
-  filter: opacity(80%);
+  filter: sepia(0.6) opacity(80%);
+  
 }
 
 /*  card 8 */
@@ -191,7 +191,7 @@
   block-size: 38px;
   inline-size: 130px;
 }
-
+/*
 .button__text {
   line-height: 90%;
   font-family: var(--accent-font);
@@ -199,7 +199,7 @@
   font-size: 13px;
   letter-spacing: 1px;
 }
-
+*/
 .button {
   cursor: pointer;
   position: relative;
@@ -224,6 +224,11 @@
 }
 
 .button__text {
+  line-height: 90%;
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
   mix-blend-mode: difference;
   color: var(--basic-color);
 }
