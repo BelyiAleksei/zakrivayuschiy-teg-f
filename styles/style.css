@@ -242,7 +242,7 @@
   align-self: center;
   margin-block-start: 50px;
   margin-block-end: 100px;
-  border: 1px solid rgb(111, 0, 255);
+  /*border: 1px solid rgb(111, 0, 255);*/
 }
 
 .button-save-description {
