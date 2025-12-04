@@ -31,9 +31,11 @@
   display: flex;
   margin-block-start: 98px;
   margin-block-end: 96px;
-  block-size: 372px;
+  /*block-size: 372px;*/
   background-color: var(--basic-color);
   border: 2px solid var(--accent-color);
+  padding-top: 127px;
+  padding-bottom: 132px;
 }
 
 .header-content {
@@ -80,12 +82,14 @@
 .main-cards-card-container-image {
   position: relative;
   block-size: clamp(23.3125rem, 16.1602rem + 30.5164vw, 43.625rem);
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+
 }
 
 .main-cards-card-container-image-img {
   display: block;
-  width: 100%;
-  
+  width: 100%;  
 }
 
 /*  card 2 */
@@ -142,7 +146,7 @@
 @supports not (
   (text-stroke: 1px var(--basic-color)) or (-webkit-text-stroke: 1px var(--basic-color))
 ) {
-  .card__label {
+  .main-cards-card-label {
     color: var(--accent-color);
     text-shadow: 1px 1px 0 var(--basic-color), -1px -1px 0 var(--basic-color),
       -1px 1px 0 var(--basic-color), 1px -1px 0 var(--basic-color);
@@ -152,8 +156,10 @@
 .main-cards-card-description {
   display: flex;
   flex-direction: column;
-  margin: 25px;
+  padding: 25px;
   gap: 25px;
+  border-top: 2px solid #000;
+  /*border: 1px solid red;*/
 }
 
 .main-cards-card-description-text {
@@ -161,8 +167,7 @@
   font-weight: var(--s-size);
   line-height: 21px;
 }
-/*------------------------------------------------------------*/
-/*------------------------------------------------------------*/
+
 .buttons {
   align-self: flex-end;
   display: flex;
@@ -191,15 +196,7 @@
   block-size: 38px;
   inline-size: 130px;
 }
-/*
-.button__text {
-  line-height: 90%;
-  font-family: var(--accent-font);
-  font-weight: 400;
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-*/
+
 .button {
   cursor: pointer;
   position: relative;
@@ -232,19 +229,23 @@
   mix-blend-mode: difference;
   color: var(--basic-color);
 }
-/*------------------------------------------------------------*/
-/*------------------------------------------------------------*/
 
+.container-button-save {
+  display: flex;
+  /*border: 1px solid red;*/
+  justify-content: center;
+}
 
-.footer-button-save {
+.button-save {
   inline-size: 335px;
   block-size: 55px;
   align-self: center;
   margin-block-start: 50px;
   margin-block-end: 100px;
+  border: 1px solid rgb(111, 0, 255);
 }
 
-.footer-button-save-description {
+.button-save-description {
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 13px;
@@ -257,7 +258,7 @@
 
 }
 
-.footer-button-save-description-image {
+.button-save-description-image {
   color: var(--basic-color);
   inline-size: 21px;
   block-size: auto;
@@ -270,7 +271,11 @@
   align-items: center;
   justify-content: center;
   inline-size: 353px;
-  block-size: 191px;
+  /*block-size: 191px;*/
+  padding-bottom: 25px;
+  padding-top: 25px;
+  /*border: 3px solid red;*/
+  margin-top: 387px;
 }
 
 .dialog[open]::backdrop {
@@ -290,17 +295,22 @@ body:has(.dialog[open]) {
 .dialog-content-text {
   display: flex;
   inline-size: 293px;
-  block-size: 63px;
+  /*block-size: 63px;*/
   align-items: center;
   gap: 20px;
+  /*border: 1px solid red;*/
 }
 
 .floppy-dialog {
-  block-size: 39px;
-  inline-size: 39px;
+  block-size: auto;
+  inline-size: 50px;
+  width: 39px;
+  /*border: 1px solid red;*/
 }
 
 .dialog-content-text-title {
+  display: block;
+  inline-size: 234px;
   font-size: 14px;
   font-weight: 400;
   line-height: 150%;
@@ -317,7 +327,7 @@ body:has(.dialog[open]) {
 
 @media (width <= 426px) {
   .header {
-    block-size: 327px;
+    /*block-size: 327px;*/
     max-inline-size: 375px;
     margin-block-start: 100px;
     margin-block-end: 100px;
@@ -332,7 +342,7 @@ body:has(.dialog[open]) {
     block-size: 84px;
   }
 
-  .footer-button-save-description {
+  .button-save-description {
     flex-direction: column;
   }
 
@@ -341,7 +351,7 @@ body:has(.dialog[open]) {
     inline-size: 130px;
   }
 
-  .footer-button-save-description-image {
+  .button-save-description-image {
     inline-size: 28px;
   }
 
@@ -357,7 +367,6 @@ body:has(.dialog[open]) {
     inline-size: 261px;
     block-size: 38px;
   }
-
 }
 
 .button:focus:focus-visible {
@@ -431,3 +440,4 @@ body:has(.dialog[open]) {
   animation: sparks 0.3s ease-in 1;
   animation-delay: 0.3s;
 }
+

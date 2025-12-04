@@ -80,14 +80,13 @@
                   />
                 </svg>
               </button>
-              <button class="button card__like-button" type="button">
+              <button class="main-cards-card-description-buttons-like button card__like-button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
 
           </div>
-        </article>
-        
+        </article>        
 
 
         <!-- card 2 -->
@@ -531,26 +530,24 @@
           </div>
         </article>
       </div>
+      <div class="container-button-save">
+        <button
+          class="button-save button"
+          type="button"
+          onclick="window['save-dialog'].showModal()"
+        >
+          <span class="button-save-description">
+            <svg class="button-save-description-image" width="39" height="39" viewBox="0 0 39 39">
+              <use href="./svg/disk.svg#floppy">
+              </use>
+            </svg>
+            <span class="button-save-description-text button__text">Сохранить на память</span>
+          </span>
+        </button>
+      </div>
     </main>
 
-    <!-- footer -->
-     <footer>
-      <button
-        class="footer-button-save button"
-        type="button"
-        onclick="window['save-dialog'].showModal()"
-      >
-        <div class="footer-button-save-description">
-          <svg class="footer-button-save-description-image" width="39" height="39" viewBox="0 0 39 39">
-            <use href="./svg/disk.svg#floppy">
-            </use>
-          </svg>
-          <span class="footer-button-save-description-text">Сохранить на память</span>
-        </div>
-      </button>
-     </footer>
-
-
+    
      <!-- dialog -->
       <dialog class="dialog" id="save-dialog">
         <div class="dialog-content">
@@ -559,7 +556,7 @@
               <use href="./svg/disk.svg#floppy"></use>
             </svg>
             <h2 class="dialog-content-text-title">
-              Вставьте дискету, чтобы продолжить
+              Вставьте дискету,&nbsp;чтобы продолжить
             </h2>
           </div>
           <button
@@ -567,7 +564,7 @@
             type="submit"
             onclick="window['save-dialog'].close()"
           >
-            <span class="dialog-button-text">
+            <span class="dialog-button-text button__text">
               OK
             </span>
           </button>
